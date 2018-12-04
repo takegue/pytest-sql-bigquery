@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+sqlchecker = {editable = true,path = "."}
+pipenv = "*"
+pytest-cov = "*"
+coverage-sql = {editable = true,version = "*"}
+
+[packages]
+sqlparse = "==0.2.4"
+tabulate = "*"
+pytest = "*"
+google-cloud-bigquery = "*"
+coverage-sql = {editable = true,version = "*"}
+
+[requires]
+python_version = "3.7"
