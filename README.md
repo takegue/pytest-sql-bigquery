@@ -20,9 +20,9 @@
 pip install pytest-bigquery-sql
 ```
 
-Then, set up `confidist.py` as pytest plugin.
+Then, set up `confidist.py` for pytest settings.
 
-```
+```pytest
 import pytest
 
 from sqlchecker.integrations.pytest import SQLReaderForChecking
@@ -46,10 +46,16 @@ def pytest_collect_file(parent, path):
             ])
 ```
 
+Run test for `examples/sql` directory
+
+```
+pytest run -vv examples/sql 
+```
+
 
 ## SQL Test Examples
 
-```
+```sql
 with dataset as (
     select 1
     union all select 2
