@@ -23,7 +23,7 @@ pip install pytest-bigquery-sql
 
 Then, set up `confidist.py` for pytest settings.
 
-```pytest
+```python
 import pytest
 
 from sqlchecker.integrations.pytest import SQLReaderForChecking
