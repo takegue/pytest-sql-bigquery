@@ -1,3 +1,13 @@
-# pytest-bq-sql
 
-test suits for bigquery sql
+# Pytest plugin for Bigquery SQL
+
+## Requirements
+
+## Get Started
+
+```
+pip install ./
+```
+
+
+## SQL Test Examples
