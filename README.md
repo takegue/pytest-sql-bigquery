@@ -4,6 +4,37 @@
 pytest-sql-bigquery is pytest-plugin which provides a sql-unitest-framework for BigQuery.
 This plugin adopts an end-to-end approch that runnning SQL test on SQL engines.
 
+## Test SQL by SQL on BigQuery Engine
+
+See following SQL codes:
+
+```sql
+with dataset as (
+    select 1
+    union all select 2
+)
+, __check_sample as (
+    select 'test' as label, count(1) as actual, 2 as expected from dataset 
+)
+
+select * from dataset
+```
+
+This code is minimal example including test case.
+`__check_sample` is a test case which makes sure the `dataset` view has just 2 record.
+
+
+Our idea is very simple: "Verify SQL code by SQL-self."
+
+This plugin generate SQL test codes from SQL and executed them on SQL-engine such as BigQuery.
+
+The advantages of this approch are 
+
+- SQL codes owns specification itself
+- Provide portability of logic and its test codes. 
+- Free to hard-mocking database system
+
+
 # Get Started
 
 ## Requirements
@@ -13,7 +44,6 @@ This plugin adopts an end-to-end approch that runnning SQL test on SQL engines.
 - google-cloud-bigquery (For BigQuery integration)
 
 - BigQuery (Google Cloud Project)
-
 
 ## Install
 
@@ -52,21 +82,3 @@ Run test for `examples/sql` directory
 ```
 pytest run -vv examples/sql 
 ```
-
-
-## SQL Test Examples
-
-```sql
-with dataset as (
-    select 1
-    union all select 2
-)
-, __check_sample as (
-    select 'test' as label, count(1) as actual, 2 as expected from dataset 
-)
-
-select * from dataset
-```
-
-will execute `__check_sample` by sql substitution 
-and compare columns between `actual` and `expected`
