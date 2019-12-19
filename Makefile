@@ -5,7 +5,7 @@ install:
 	poetry install
 
 test:
-	poetry run py.test -vv ./test
+	poetry run py.test -vv ./tests
 
 publish:
 	poetry publish -r testpypi
