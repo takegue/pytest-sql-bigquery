@@ -1,7 +1,8 @@
 
 # Pytest plugin for Bigquery SQL
 
-## Requirements
+pytest-sql-bigquery is pytest-plugin which provides a sql-unitest-framework for BigQuery.
+This plugin adopts an end-to-end approch that runnning SQL test on SQL engines.
 
 # Get Started
 
