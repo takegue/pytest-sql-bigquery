@@ -60,7 +60,6 @@ pytest run -vv examples/sql
 with dataset as (
     select 1
     union all select 2
-    union all select 3
 )
 , __check_sample as (
     select 'test' as label, count(1) as actual, 2 as expected from dataset 
