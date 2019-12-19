@@ -1,7 +1,7 @@
 import pytest
 import sqlparse as sp
 
-import sqlchecker.converter as lib
+import pytest_sql_bigquery.converter as lib
 
 @pytest.fixture
 def testable_stmt():

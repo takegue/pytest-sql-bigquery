@@ -3,10 +3,21 @@
 
 ## Requirements
 
-## Get Started
+# Get Started
+
+## Requirements
+
+- Python >= 3.7
+- sqlparse
+- google-cloud-bigquery (For BigQuery integration)
+
+- BigQuery (Google Cloud Project)
+
+
+## Install
 
 ```
-pip install ./
+pip install pytest-bigquery-sql
 ```
 
 
