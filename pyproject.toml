@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "pytest-sql-bigquery"
-version = "0.0.1"
+name = "pytest_sql_bigquery"
+version = "0.0.2"
 description = "Pytest plugin for testing sql on BigQuery engine"
 authors = ["TKNGUE <takegue@gmail.com>"]
 license = "MIT License"
 
 packages = [
-    { include="pytest-sql-bigquery", from="." }
+    { include="pytest_sql_bigquery", from="." }
 ]
 
 [tool.poetry.dependencies]

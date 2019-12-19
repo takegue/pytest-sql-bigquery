@@ -8,4 +8,4 @@ test:
 	poetry run py.test -vv ./tests
 
 publish:
-	poetry publish -r testpypi
+	poetry publish --build -r testpypi
