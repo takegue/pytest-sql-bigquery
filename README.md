@@ -4,7 +4,7 @@
 pytest-sql-bigquery is pytest-plugin which provides a sql-unitest-framework for BigQuery.
 This plugin adopts an end-to-end approch that runnning SQL test on SQL engines.
 
-## Test SQL by SQL on BigQuery Engine
+## Yet anthoer approch to tst SQL code
 
 See following SQL codes:
 
@@ -56,7 +56,7 @@ Then, set up `confidist.py` for pytest settings.
 ```python
 import pytest
 
-from sqlchecker.integrations.pytest import SQLReaderForChecking
+from pytest_sql_bigquery.integrations.pytest import SQLReaderForChecking
 
 class ChainPytestFile(pytest.File):
 
